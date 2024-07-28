@@ -42,13 +42,13 @@ const Footer = () => {
               <li><a href="https://pokharatourism.org.np/" target="_blank" rel="noopener noreferrer" className="hover:underline">Pokhara Tourism Council</a></li>
             </ul>
           </div>
-          {/* Contact Us Section */}
+         
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Need Help?</h2>
             <p className="text-sm text-gray-300">Phone: +123 456 7890</p>
-            <p className="text-sm text-gray-300">Email: info@explorepokhara.com</p>
+            <p className="text-sm text-gray-300">Email: ExplorePKR@gmail.com</p>
             <div className="flex space-x-4 mt-4">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400">
+              <a href="https://www.facebook.com/explorepkr/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
               <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200">
@@ -57,36 +57,11 @@ const Footer = () => {
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-400">
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
-              <a href="mailto:info@explorepokhara.com" className="text-gray-300 hover:text-gray-400">
-                <FontAwesomeIcon icon={faEnvelope} size="2x" />
-              </a>
+             
             </div>
           </div>
         </div>
-        {/* Post Gallery Section */}
-        <div className="mt-12">
-          <h2 className="text-xl font-bold mb-4">Post Gallery</h2>
-          <div className="flex flex-wrap -mx-2">
-            <div className="w-1/2 sm:w-1/3 md:w-1/6 p-2">
-              <img src={images} alt="Gallery Image 1" className="w-full h-32 rounded-lg object-cover hover:opacity-75 transition-opacity duration-300" />
-            </div>
-            <div className="w-1/2 sm:w-1/3 md:w-1/6 p-2">
-              <img src={village} alt="Gallery Image 2" className="w-full h-32 rounded-lg object-cover hover:opacity-75 transition-opacity duration-300" />
-            </div>
-            <div className="w-1/2 sm:w-1/3 md:w-1/6 p-2">
-              <img src={stupa} alt="Gallery Image 3" className="w-full h-32 rounded-lg object-cover hover:opacity-75 transition-opacity duration-300" />
-            </div>
-            <div className="w-1/2 sm:w-1/3 md:w-1/6 p-2">
-              <img src={mountains} alt="Gallery Image 4" className="w-full h-32 rounded-lg object-cover hover:opacity-75 transition-opacity duration-300" />
-            </div>
-            <div className="w-1/2 sm:w-1/3 md:w-1/6 p-2">
-              <img src={pumdi} alt="Gallery Image 5" className="w-full h-32 rounded-lg object-cover hover:opacity-75 transition-opacity duration-300" />
-            </div>
-            <div className="w-1/2 sm:w-1/3 md:w-1/6 p-2">
-              <img src={sky} alt="Gallery Image 6" className="w-full h-32 rounded-lg object-cover hover:opacity-75 transition-opacity duration-300" />
-            </div>
-          </div>
-        </div>
+      
         <div className="my-4 border-t border-white"></div>
         <div className="mt-4 text-center text-gray-400">
           <p>&copy; 2024 Explore Pokhara. All rights reserved.</p>

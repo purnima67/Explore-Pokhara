@@ -44,8 +44,8 @@ const SecurityCard = ({ contact }) => (
 );
 
 const Security = () => (
-    <div className="container mx-auto p-4 bg-gray-900">
-        <h1 className="text-4xl font-bold text-center text-white mb-8">Security Information</h1>
+    <div className="container mx-auto p-4 bg-gray-100">
+        <h1 className="text-4xl font-bold text-center text-gray-500 mb-8">Security Information</h1>
         <div className="flex flex-wrap justify-center">
             {securityContacts.map((contact, index) => (
                 <SecurityCard key={index} contact={contact} />

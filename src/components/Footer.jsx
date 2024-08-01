@@ -1,10 +1,4 @@
 import React from 'react';
-import images from '../assets/images.jpg';
-import village from '../assets/village.jpg';
-import stupa from '../assets/stupa.jpg';
-import mountains from '../assets/mountains.jpg';
-import pumdi from '../assets/pumdi.jpg';
-import sky from '../assets/sky.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -25,12 +19,12 @@ const Footer = () => {
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Categories</h2>
             <ul className="text-sm text-gray-300 space-y-2">
-              <li><a href="#adventure" className="hover:underline">Adventure & Mountaineering</a></li>
-              <li><a href="#culture" className="hover:underline">Culture</a></li>
+              <li><a href="#attractions" className="hover:underline">Attractions</a></li>
+              <li><a href="#activities" className="hover:underline">Activities</a></li>
               <li><a href="#security" className="hover:underline">Security</a></li>
-              <li><a href="#nature" className="hover:underline">Nature</a></li>
-              <li><a href="#spirituality" className="hover:underline">Spirituality & Pilgrimage</a></li>
-              <li><a href="#finance" className="hover:underline">Financial Institutes</a></li>
+              <li><a href="#rental" className="hover:underline">Rental</a></li>
+              <li><a href="#financialhelp" className="hover:underline">Financial Help</a></li>
+              <li><a href="#cuisine" className="hover:underline">Eat & Drink</a></li>
             </ul>
           </div>
           {/* Useful Links Section */}
@@ -42,7 +36,7 @@ const Footer = () => {
               <li><a href="https://pokharatourism.org.np/" target="_blank" rel="noopener noreferrer" className="hover:underline">Pokhara Tourism Council</a></li>
             </ul>
           </div>
-         
+          {/* Contact Us Section */}
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Need Help?</h2>
             <p className="text-sm text-gray-300">Phone: +123 456 7890</p>
@@ -61,7 +55,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      
+       
         <div className="my-4 border-t border-white"></div>
         <div className="mt-4 text-center text-gray-400">
           <p>&copy; 2024 Explore Pokhara. All rights reserved.</p>

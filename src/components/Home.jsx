@@ -3,10 +3,9 @@ import Carousel from './Carousel';
 
 
 import Content from './Content';
-
-import Security from './Security';
+import Otherinfo from './Otherinfo';
 import WeatherWidget from './WeatherWidget';
-import PhotoGallery from './PhotoGallery'
+import PhotoGallery from './PhotoGallery';
 const Home = () => {
   return (
     <div>
@@ -20,7 +19,7 @@ const Home = () => {
     </div>
     <PhotoGallery />
      
-      <Security />
+    <Otherinfo />
      
     </div>
   );

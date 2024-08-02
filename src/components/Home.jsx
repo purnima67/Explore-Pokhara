@@ -1,20 +1,25 @@
 import React from 'react';
 import Carousel from './Carousel';
-import Main from './Main';
+
 
 import Content from './Content';
-import Temples from './Temples';
+
 import Security from './Security';
 import WeatherWidget from './WeatherWidget';
-
+import PhotoGallery from './PhotoGallery'
 const Home = () => {
   return (
     <div>
       <Carousel />
-      <Main />
-      <WeatherWidget />
+  
+      
       <Content />
-      <Temples />
+      <div className="container mx-auto p-4 md:w-[60rem]">
+      
+      <WeatherWidget />
+    </div>
+    <PhotoGallery />
+     
       <Security />
      
     </div>

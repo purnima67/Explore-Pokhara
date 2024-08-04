@@ -8,7 +8,7 @@ const securityContacts = [
     link: 'https://gandaki.nepalpolice.gov.np/about-us/tourist-police/',
   },
   {
-    name: 'Pokhara Tourist Information Center',
+    name: 'Pokhara Tourist Information ',
     link: 'https://ntb.gov.np/en/latest-travel-updates',
   },
   {
@@ -31,7 +31,7 @@ const SecurityCard = ({ contact }) => (
         </p>
       )}
 
-      {/* Render the View More link if available */}
+      
       {contact.link && (
         <a
           href={contact.link}
@@ -46,14 +46,14 @@ const SecurityCard = ({ contact }) => (
   </div>
 );
 
-// Otherinfo component to render a list of SecurityCard components
+
 const Otherinfo = () => (
   <div className="container mx-auto p-4 bg-gray-100">
     <h1 className="text-4xl font-bold text-center text-gray-500 mb-8">
       Other Informations
     </h1>
     <div className="flex flex-wrap justify-center">
-      {/* Map through security contacts and render SecurityCard for each */}
+     
       {securityContacts.map((contact, index) => (
         <SecurityCard key={index} contact={contact} />
       ))}

@@ -34,7 +34,7 @@ const Explore = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-gray-100">
-      <h1 className="text-4xl font-bold mb-6 text-gray-800">Best Time to Visit Pokhara</h1>
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">Explore the Best Time to Visit Pokhara</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {seasons.map((season, index) => (
           <a

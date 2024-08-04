@@ -11,13 +11,14 @@ const Navbar = () => {
   const [isCommunityDropdownOpen, setIsCommunityDropdownOpen] = useState(false);
   const [isEthnicDropdownOpen, setIsEthnicDropdownOpen] = useState(false);
   const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false);
-
+  const [isActivitesDropdownOpen, setIsActivitiesDropdownOpen] = useState(false);
   const thingsToDoRef = useRef(null);
   const adventureRef = useRef(null);
   const touristAttractionsRef = useRef(null);
   const communityRef = useRef(null);
   const ethnicRef = useRef(null);
   const eventsRef = useRef(null);
+  const activitiesRef = useRef(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);

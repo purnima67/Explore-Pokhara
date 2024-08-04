@@ -6,6 +6,7 @@ import Content from './Content';
 import Otherinfo from './Otherinfo';
 import WeatherWidget from './WeatherWidget';
 import PhotoGallery from './PhotoGallery';
+import Explore from './Explore';
 const Home = () => {
   return (
     <div>
@@ -18,7 +19,7 @@ const Home = () => {
       <WeatherWidget />
     </div>
     <PhotoGallery />
-     
+     <Explore />
     <Otherinfo />
      
     </div>

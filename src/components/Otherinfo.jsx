@@ -1,62 +1,64 @@
 import React from 'react';
 
+// Updated security contacts
 const securityContacts = [
-    {
-        name: 'Tourist Police Pokhara',
-        contact: '9856082761, 061452761',
-        email: 'touristpolicepokhara@nepalpolice.gov.np',
-        location: 'Pokhara-17 (Damside), Kaski',
-        link: 'https://gandaki.nepalpolice.gov.np/about-us/tourist-police/',
-        description: 'For assistance and safety concerns of tourists in Pokhara.'
-    },
-    {
-        name: 'Pokhara Tourist Information Center',
-        link: 'https://ntb.gov.np/en/latest-travel-updates',
-        description: 'Official tourist information center in Pokhara.'
-    },
-    {
-        name: 'Banks in Pokhara',
-        link: 'https://www.financialnotices.com/bank-location/local-396.bank',
-        description: 'For banking services and inquiries in Pokhara.'
-    }
+  {
+    name: 'Tourist Police Pokhara',
+    contact: '9856082761, 061452761',
+    link: 'https://gandaki.nepalpolice.gov.np/about-us/tourist-police/',
+  },
+  {
+    name: 'Pokhara Tourist Information Center',
+    link: 'https://ntb.gov.np/en/latest-travel-updates',
+  },
+  {
+    name: '24hr ATM',
+    description: 'Locate 24hr ATMs in Pokhara.',
+    link: '/bank', // Internal link to bank.jsx
+  }
 ];
 
+// SecurityCard component to display individual contact information
 const SecurityCard = ({ contact }) => (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-gray-800 hover:shadow-xl transition-shadow duration-300">
-        <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2 text-white">{contact.name}</div>
-            <p className="text-gray-400 text-base mb-4">{contact.description}</p>
-            {contact.contact && (
-                <p className="text-gray-400 text-sm">
-                    <span className="font-semibold">Contact:</span> {contact.contact}
-                </p>
-            )}
-            {contact.email && (
-                <p className="text-gray-400 text-sm">
-                    <span className="font-semibold">Email:</span> <a href={`mailto:${contact.email}`} className="text-blue-400 hover:text-blue-600">{contact.email}</a>
-                </p>
-            )}
-            {contact.location && (
-                <p className="text-gray-400 text-sm">
-                    <span className="font-semibold">Location:</span> {contact.location}
-                </p>
-            )}
-            {contact.link && (
-                <a href={contact.link} className="text-blue-400 hover:text-blue-600" target="_blank" rel="noopener noreferrer">View More</a>
-            )}
-        </div>
+  <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-gray-800 hover:shadow-xl transition-shadow duration-300">
+    <div className="px-6 py-4">
+      <div className="font-bold text-xl mb-2 text-white">{contact.name}</div>
+
+      {/* Conditionally render contact details if available */}
+      {contact.contact && (
+        <p className="text-gray-400 text-sm">
+          <span className="font-semibold">Contact:</span> {contact.contact}
+        </p>
+      )}
+
+      {/* Render the View More link if available */}
+      {contact.link && (
+        <a
+          href={contact.link}
+          className="text-blue-400 hover:text-blue-600"
+          target={contact.link.startsWith('http') ? "_blank" : "_self"} // Open external links in new tab
+          rel="noopener noreferrer"
+        >
+          View More
+        </a>
+      )}
     </div>
+  </div>
 );
 
+// Otherinfo component to render a list of SecurityCard components
 const Otherinfo = () => (
-    <div className="container mx-auto p-4 bg-gray-100">
-        <h1 className="text-4xl font-bold text-center text-gray-500 mb-8">Other Informations</h1>
-        <div className="flex flex-wrap justify-center">
-            {securityContacts.map((contact, index) => (
-                <SecurityCard key={index} contact={contact} />
-            ))}
-        </div>
+  <div className="container mx-auto p-4 bg-gray-100">
+    <h1 className="text-4xl font-bold text-center text-gray-500 mb-8">
+      Other Informations
+    </h1>
+    <div className="flex flex-wrap justify-center">
+      {/* Map through security contacts and render SecurityCard for each */}
+      {securityContacts.map((contact, index) => (
+        <SecurityCard key={index} contact={contact} />
+      ))}
     </div>
+  </div>
 );
 
 export default Otherinfo;

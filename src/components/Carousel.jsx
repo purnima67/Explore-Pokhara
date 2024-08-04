@@ -11,7 +11,7 @@ const PokharaCarousel = () => {
       <Carousel
         showArrows={false} // Hide arrows
         showThumbs={false} // Hide thumbnails
-        infiniteLoop={false} // Enable infinite loop
+        infiniteLoop={true} // Enable infinite loop
         autoPlay={true} // Enable auto play
         interval={3000} // 3 seconds interval
         transitionTime={600} // 600ms transition time
@@ -36,12 +36,12 @@ const PokharaCarousel = () => {
           <img
             src={mountains}
             alt="Scenic View of Pokhara"
-            className="object-cover w-full h-96 md:h-[40rem]"
+            className="object-cover w-full h-60 md:h-[40rem]"
           />
           <div className="absolute inset-0 flex items-center justify-center w-full h-full">
             <div className="text-center text-white">
-              <h2 className="text-5xl font-bold mb-2 mt-24 md:mt-40">Find your paradise</h2>
-              <p className="text-lg mb-4">Discover the serene lakes and majestic mountains.</p>
+              <h2 className="md:text-5xl font-bold mb-2 mt-24 md:mt-40 text-2xl">Find your paradise</h2>
+              <p className="md:text-lg mb-4">Discover the serene lakes and majestic mountains.</p>
               <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Explore</button>
             </div>
           </div>
@@ -50,12 +50,12 @@ const PokharaCarousel = () => {
           <img
             src={boat}
             alt="Boating in Pokhara"
-            className="object-cover w-full h-96 md:h-[40rem]"
+            className="object-cover w-full h-60 md:h-[40rem]"
           />
           <div className="absolute inset-0 flex items-center justify-center w-full h-full">
             <div className="text-center text-white">
-              <h2 className="text-5xl font-bold mb-2 mt-24 md:mt-40">Boating Adventure</h2>
-              <p className="text-lg mb-4">Experience boating amidst stunning landscapes.</p>
+              <h2 className="md:text-5xl font-bold mb-2 mt-24 md:mt-40 text-2xl">Boating Adventure</h2>
+              <p className="md:text-lg mb-4">Experience boating amidst stunning landscapes.</p>
               <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Explore</button>
             </div>
           </div>
@@ -64,12 +64,12 @@ const PokharaCarousel = () => {
           <img
             src={sky}
             alt="Sunrise in Pokhara"
-            className="object-cover w-full h-96 md:h-[40rem]"
+            className="object-cover w-full h-60 md:h-[40rem]"
           />
           <div className="absolute inset-0 flex items-center justify-center w-full h-full">
             <div className="text-center text-white">
-              <h2 className="text-5xl font-bold mb-2 mt-24 md:mt-40">Morning Bliss</h2>
-              <p className="text-lg mb-4">Witness the breathtaking sunrise over Pokhara.</p>
+              <h2 className="md:text-5xl font-bold mb-2 mt-24 md:mt-40 text-2xl">Morning Bliss</h2>
+              <p className="md:text-lg mb-4">Witness the breathtaking sunrise over Pokhara.</p>
               <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Explore</button>
             </div>
           </div>

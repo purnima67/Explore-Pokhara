@@ -9,7 +9,7 @@ import emstreks from '../assets/emstreks.jpg';
 const Collaborations = () => {
   return (
     <div className="flex flex-col items-center p-4 bg-gray-100">
-      <h1 className="text-xl font-semibold ">Our Collaborations</h1>
+      <h1 className="text-xl font-semibold ">Our Collaboration Team</h1>
       <hr className="w-1/2 border-t-2 border-gray-300 mb-6" />
 
       <div className="flex justify-center flex-wrap">

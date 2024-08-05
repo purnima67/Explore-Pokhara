@@ -3,12 +3,12 @@ import React from 'react';
 // Updated security contacts
 const securityContacts = [
   {
-    name: 'Tourist Police Pokhara',
+    name: 'Tourist Police ',
     contact: '9856082761, 061452761',
     link: 'https://gandaki.nepalpolice.gov.np/about-us/tourist-police/',
   },
   {
-    name: 'Pokhara Tourist Information ',
+    name: ' Tourist Information ',
     link: 'https://ntb.gov.np/en/latest-travel-updates',
   },
   {

@@ -11,15 +11,14 @@ const Navbar = () => {
   const [isCommunityDropdownOpen, setIsCommunityDropdownOpen] = useState(false);
   const [isEthnicDropdownOpen, setIsEthnicDropdownOpen] = useState(false);
   const [isEventsDropdownOpen, setIsEventsDropdownOpen] = useState(false);
-  const [isActivitesDropdownOpen, setIsActivitiesDropdownOpen] = useState(false);
+ 
   const thingsToDoRef = useRef(null);
   const adventureRef = useRef(null);
   const touristAttractionsRef = useRef(null);
   const communityRef = useRef(null);
   const ethnicRef = useRef(null);
   const eventsRef = useRef(null);
-  const activitiesRef = useRef(null);
-
+ 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -128,7 +127,7 @@ const Navbar = () => {
             </button>
             {isTouristAttractionsDropdownOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                <Link to="/TouristAttractions/Temples" className="block px-4 py-2 text-black hover:bg-gray-100">Temples</Link>
+                <Link to="/TouristAttractions/Temples" className="block px-4 py-2 text-black hover:bg-gray-100">Temples & Monuments</Link>
                 <Link to="/TouristAttractions/Caves" className="block px-4 py-2 text-black hover:bg-gray-100">Caves</Link>
                 <Link to="/TouristAttractions/Lakes" className="block px-4 py-2 text-black hover:bg-gray-100">Lakes</Link>
                 <Link to="/TouristAttractions/Homestay" className="block px-4 py-2 text-black hover:bg-gray-100">Homestay</Link>
@@ -137,14 +136,14 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Community Festival dropdown */}
+         
           <div className="relative" ref={communityRef}>
             <button onClick={toggleCommunityDropdown} className="text-white hover:text-gray-300 flex items-center">
               Community Festival <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
             </button>
             {isCommunityDropdownOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                <Link to="/Festival/StreetFestival" className="block px-4 py-2 text-black hover:bg-gray-100">Street Festival</Link>
+                <Link to="/CommunityFestival/Street" className="block px-4 py-2 text-black hover:bg-gray-100">Street Festival</Link>
                 <Link to="/Festival/FewaFestival" className="block px-4 py-2 text-black hover:bg-gray-100">Fewa Festival</Link>
                 <Link to="/Festival/FalguPurnima" className="block px-4 py-2 text-black hover:bg-gray-100">Falgu Purnima</Link>
                 <Link to="/Festival/RicePlantation" className="block px-4 py-2 text-black hover:bg-gray-100">Rice Plantation</Link>
@@ -230,7 +229,7 @@ const Navbar = () => {
                 </button>
                 {isTouristAttractionsDropdownOpen && (
                   <div className="pl-4">
-                    <Link to="/TouristAttractions/Temples" className="block text-black hover:bg-gray-100 p-2 rounded">Temples</Link>
+                    <Link to="/TouristAttractions/Temples" className="block text-black hover:bg-gray-100 p-2 rounded">Temples & Monuments</Link>
                     <Link to="/TouristAttractions/Caves" className="block text-black hover:bg-gray-100 p-2 rounded">Caves</Link>
                     <Link to="/TouristAttractions/Lakes" className="block text-black hover:bg-gray-100 p-2 rounded">Lakes</Link>
                     <Link to="/TouristAttractions/Homestay" className="block text-black hover:bg-gray-100 p-2 rounded">Homestay</Link>
@@ -246,7 +245,7 @@ const Navbar = () => {
                 </button>
                 {isCommunityDropdownOpen && (
                   <div className="pl-4">
-                    <Link to="/Festival/StreetFestival" className="block text-black hover:bg-gray-100 p-2 rounded">Street Festival</Link>
+                    <Link to="/CommunityFestival/Street" className="block text-black hover:bg-gray-100 p-2 rounded">Street Festival</Link>
                     <Link to="/Festival/FewaFestival" className="block text-black hover:bg-gray-100 p-2 rounded">Fewa Festival</Link>
                     <Link to="/Festival/FalguPurnima" className="block text-black hover:bg-gray-100 p-2 rounded">Falgu Purnima</Link>
                     <Link to="/Festival/RicePlantation" className="block text-black hover:bg-gray-100 p-2 rounded">Rice Plantation</Link>

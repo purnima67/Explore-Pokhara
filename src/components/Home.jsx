@@ -7,7 +7,7 @@ import Otherinfo from './Otherinfo';
 import WeatherWidget from './WeatherWidget';
 import PhotoGallery from './PhotoGallery';
 import Explore from './Explore';
-import Collaborations from './Collaborations'
+
 const Home = () => {
   return (
     <div>
@@ -22,7 +22,7 @@ const Home = () => {
     <PhotoGallery />
      <Explore />
     <Otherinfo />
-     <Collaborations />
+    
     </div>
   );
 };

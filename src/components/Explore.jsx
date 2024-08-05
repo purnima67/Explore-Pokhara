@@ -46,7 +46,7 @@ const Explore = () => {
             <img
               src={season.image}
               alt={`Scenic view of Pokhara during ${season.name}`}
-              className="h-full w-full object-cover md:w-full md:h-full" // Ensure the image covers the entire card
+              className="h-full w-full object-cover md:w-full md:h-full" 
             />
             <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white p-4">
               <h2 className="text-xl font-semibold">{season.name}</h2>

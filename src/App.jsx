@@ -12,6 +12,7 @@ import Street from './components/Street';
 import Yoga from './components/Yoga';
 import Temples from './components/Temples';
 import About from './components/About';
+import ATM from './components/ATM'
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/TouristAttractions/Temples' element={<Temples />} />
           <Route path='/CommunityFestival/Street' element={<Street />} /> 
           <Route path="/about" element={<About />} />
+          <Route path="/ATM" element={<ATM />}/>
         </Routes>
         <Footer />
       </div>

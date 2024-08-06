@@ -10,38 +10,38 @@ const Explore = () => {
       name: 'Spring',
       months: 'March - May',
       image: spring,
-      link: '/spring', // Internal link for Spring
+      link: '/spring', 
     },
     {
       name: 'Summer',
       months: 'June - August',
       image: summer,
-      link: '/summer', // Internal link for Summer
+      link: '/summer', 
     },
     {
       name: 'Autumn',
       months: 'September - November',
       image: autumn,
-      link: '/autumn', // Internal link for Autumn
+      link: '/autumn', 
     },
     {
       name: 'Winter',
       months: 'December - February',
       image: winter,
-      link: '/winter', // Internal link for Winter
+      link: '/winter', 
     },
   ];
 
   return (
     <div className="flex flex-col items-center justify-center p-8 bg-gray-100">
-      <h1 className="md:text-4xl font-bold mb-6 text-gray-800 text-2xl italic">Best Time to Visit Pokhara</h1>
+      <h1 className="md:text-4xl font-bold mb-6 text-gray-800 text-2xl italic">Pokhara on all Season</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {seasons.map((season, index) => (
           <a
             key={index}
-            href={season.link} // Link to the specific page for the season
+            href={season.link} 
             className="block relative overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 bg-white"
-            style={{ height: '250px', width: '100%' }} // Fixed dimensions for small screens
+            style={{ height: '250px', width: '100%' }} 
           >
             <img
               src={season.image}

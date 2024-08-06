@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Useful Links</h2>
             <ul className="text-sm text-gray-300 space-y-2">
-              <li><a href="https://ntb.gov.np/" target="_blank" rel="noopener noreferrer" className="hover:underline">Nepal Tourism Board</a></li>
+              <li><a href="" target="_blank" rel="noopener noreferrer" className="hover:underline">Latest New Update</a></li>
               <li><a href="https://pokhara.immigration.gov.np/en" target="_blank" rel="noopener noreferrer" className="hover:underline">Immigration Office, Pokhara</a></li>
               <li><a href="https://pokharatourism.org.np/" target="_blank" rel="noopener noreferrer" className="hover:underline">Pokhara Tourism Council</a></li>
             </ul>
@@ -42,9 +42,10 @@ const Footer = () => {
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Need Help?</h2>
            
+            <p className="text-sm text-gray-300">Whatsapp/Viber: +977 9856054142</p>
             <p className="text-sm text-gray-300">Email: ExplorePKR@gmail.com</p>
             <div className="flex space-x-4 mt-4">
-              <a href="https://www.facebook.com/explorepkr/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400">
+              <a href="https://www.facebook.com/explorepkr" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
               <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200">

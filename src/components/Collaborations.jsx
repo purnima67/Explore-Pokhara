@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Import logos
+
 import ptc from '../assets/ptc (1).jpg';
 import nic from '../assets/nic.jpg';
 import devpkr from '../assets/devpkr (1).jpg';

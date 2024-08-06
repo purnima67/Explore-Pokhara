@@ -44,12 +44,7 @@ const temples = [
         location: 'Chhorepatan, Hemja, Prithivi Chowk',
         features: ['Tibetan culture', 'Monasteries and curio shops', 'Carpet factories']
     },
-    {
-        name: 'Bird Watching',
-        description: 'Pokhara is a paradise for bird watchers, with different types of migratory and resident birds. Popular spots include Pame, Begnas, Rupa, Raniban, Jhijhirka – Astam, Tutunga – Bachhebuduwa, and Armala.',
-        location: 'Various locations',
-        features: ['Wetland, woodland, and birds of prey', 'Guided bird watching tours']
-    }];
+    ];
 
 const Card = ({ item }) => (
     <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-blue-100 hover:shadow-xl transition-shadow duration-300">

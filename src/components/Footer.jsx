@@ -29,7 +29,7 @@ const Footer = () => {
               <li><a href="#EatandDrink" className="hover:underline">Eat & Drink</a></li>
             </ul>
           </div>
-          {/* Useful Links Section */}
+          
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Useful Links</h2>
             <ul className="text-sm text-gray-300 space-y-2">
@@ -38,7 +38,7 @@ const Footer = () => {
               <li><a href="https://pokharatourism.org.np/" target="_blank" rel="noopener noreferrer" className="hover:underline">Pokhara Tourism Council</a></li>
             </ul>
           </div>
-          {/* Contact Us Section */}
+          
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Need Help?</h2>
            

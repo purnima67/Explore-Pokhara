@@ -370,6 +370,8 @@ const Navbar = () => {
         {isOthersDropdownOpen && (
           <div className="pl-4">
             <Link to="/Events/Others/DevelopersMeet" className="block text-black hover:bg-gray-100">Developers Meet</Link>
+            <Link to="/Events/Others/HikersClubNepal" className="block text-black hover:bg-gray-100">Hikers Club Nepal</Link>
+            <Link to="/Events/Others/Thrifting" className="block text-black hover:bg-gray-100">Thrifting</Link>
           </div>
         )}
       </div>

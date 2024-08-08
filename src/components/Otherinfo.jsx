@@ -82,12 +82,13 @@ const SecurityCard = ({ contact }) => (
 const Otherinfo = () => (
   <div className="flex flex-col items-center justify-center p-8 bg-gray-100">
     <h1 className="md:text-4xl font-bold mb-6 text-gray-800 text-2xl italic">Important Information</h1>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
       {securityContacts.map((contact, index) => (
         <SecurityCard key={index} contact={contact} />
       ))}
     </div>
   </div>
 );
+
 
 export default Otherinfo;

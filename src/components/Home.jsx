@@ -16,13 +16,14 @@ const Home = () => {
   
       
       <Content />
-      <div className="container mx-auto p-4 md:w-[60rem]">
       
-      <WeatherWidget />
-    </div>
     <PhotoGallery />
     
      <Explore />
+     <div className="container mx-auto p-4 md:w-[60rem]">
+      
+      <WeatherWidget />
+    </div>
      <OtherAttractions />
     <Otherinfo />
     

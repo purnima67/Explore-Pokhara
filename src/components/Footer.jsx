@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-gray-500 to-black text-white py-10">
       <div className="container mx-auto px-6">
         <div className="flex flex-wrap -mx-4">
-          {/* Our Mission Section */}
+          
           <div className="w-full md:w-1/4 p-4">
           <h2 className="text-xl font-bold mb-4">
               <Link to="/about" className="hover:underline">Our Mission</Link>
@@ -17,7 +17,7 @@ const Footer = () => {
               Our mission is to promote Pokhara's tourism destinations globally and provide  information to the tourists who want to explore this beautiful city.
             </p>
           </div>
-          {/* Categories Section */}
+         
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Categories</h2>
             <ul className="text-sm text-gray-300 space-y-2">
@@ -33,9 +33,12 @@ const Footer = () => {
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Useful Links</h2>
             <ul className="text-sm text-gray-300 space-y-2">
-              <li><a href="" target="_blank" rel="noopener noreferrer" className="hover:underline">Latest New Update</a></li>
+              <li><a href=""  className="hover:underline">Latest New Update</a></li>
               <li><a href="https://pokhara.immigration.gov.np/en" target="_blank" rel="noopener noreferrer" className="hover:underline">Immigration Office, Pokhara</a></li>
               <li><a href="https://pokharatourism.org.np/" target="_blank" rel="noopener noreferrer" className="hover:underline">Pokhara Tourism Council</a></li>
+              <li><a href="https://ntb.gov.np/" target="_blank" rel="noopener noreferrer" className="hover:underline">Nepal Tourism Board</a></li>
+             
+              <li><a href="https://immigration.gov.np/en" target="_blank" rel="noopener noreferrer" className="hover:underline">Department Of Immigration</a></li>
             </ul>
           </div>
           

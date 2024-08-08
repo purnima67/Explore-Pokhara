@@ -119,9 +119,9 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6 mr-16">
           <Link to="/" className="text-white hover:text-gray-300">Home</Link>
 
-          
+          {/* Things to do dropdown */}
           <div className="relative" ref={thingsToDoRef}>
-            <button onClick={toggleThingsToDoDropdown}  className="text-white hover:text-gray-300 flex items-center">
+            <button onClick={toggleThingsToDoDropdown} className="text-white hover:text-gray-300 flex items-center">
               Things to do <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
             </button>
             {isThingsToDoDropdownOpen && (
@@ -137,6 +137,7 @@ const Navbar = () => {
                     <div className="pl-4">
                       <Link to="ThingsToDo/Adventure/Paragliding" className="block px-4 py-2 text-black hover:bg-gray-100">Paragliding</Link>
                       <Link to="ThingsToDo/Adventure/BungeeJump" className="block px-4 py-2 text-black hover:bg-gray-100">Bungee Jump</Link>
+                      <Link to="ThingsToDo/Adventure/ZipFlyer" className="block px-4 py-2 text-black hover:bg-gray-100">Zip Flyer</Link>
                     </div>
                   )}
                 </div>
@@ -144,7 +145,7 @@ const Navbar = () => {
             )}
           </div>
 
-         
+          {/* Tourist Attractions dropdown */}
           <div className="relative" ref={touristAttractionsRef}>
             <button onClick={toggleTouristAttractionsDropdown} className="text-white hover:text-gray-300 flex items-center">
               Tourist Attractions <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
@@ -171,31 +172,19 @@ const Navbar = () => {
                 <Link to="/Festival/FewaFestival" className="block px-4 py-2 text-black hover:bg-gray-100">Fewa Festival</Link>
                 <Link to="/Festival/FalguPurnima" className="block px-4 py-2 text-black hover:bg-gray-100">Falgu Purnima</Link>
                 <Link to="/Festival/RicePlantation" className="block px-4 py-2 text-black hover:bg-gray-100">Rice Plantation</Link>
-                <div className="relative" ref={ethnicRef}>
-                  <button onClick={toggleEthnicDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
-                    Ethnics/Cultural <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-                  </button>
-                  {isEthnicDropdownOpen && (
-                    <div className="pl-4">
-                      <Link to="/Ethnic/Newar" className="block px-4 py-2 text-black hover:bg-gray-100">Newar</Link>
-                      <Link to="/Ethnic/Gurung" className="block px-4 py-2 text-black hover:bg-gray-100">Gurung</Link>
-                      <Link to="/Ethnic/Rai" className="block px-4 py-2 text-black hover:bg-gray-100">Rai</Link>
-                      <Link to="/Ethnic/Magar" className="block px-4 py-2 text-black hover:bg-gray-100">Magar</Link>
-                    </div>
-                  )}
-                </div>
+                <Link to="/Festival/Ethincs/Culture" className="block px-4 py-2 text-black hover:bg-gray-100">Ethnics/Culture</Link>
               </div>
             )}
           </div>
          
-          
+          {/* Tourist Attractions dropdown */}
           <div className="relative" ref={eventsRef}>
   <button onClick={toggleEventsDropdown} className="text-white hover:text-gray-300 flex items-center">
     Events <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
   </button>
   {isEventsDropdownOpen && (
     <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-     
+      {/* Trail Race Submenu */}
       <div className="relative">
         <button onClick={toggleTrailRaceDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
           Trail Race <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
@@ -211,7 +200,7 @@ const Navbar = () => {
       <Link to="/Events/PokharaMarathon" className="block px-4 py-2 text-black hover:bg-gray-100">Pokhara Marathon</Link>
       <Link to="/Events/MusicalEvents" className="block px-4 py-2 text-black hover:bg-gray-100">Musical Events</Link>
 
-      
+      {/* Others Submenu */}
       <div className="relative">
         <button onClick={toggleOthersDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
           Others <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
@@ -219,7 +208,7 @@ const Navbar = () => {
         {isOthersDropdownOpen && (
           <div className="pl-4">
             <Link to="/Events/Others/DevelopersMeet" className="block text-black hover:bg-gray-100 p-2 rounded">Developers Meet</Link>
-            <Link to="/Events/Others/Hikers Club Nepal" className="block text-black hover:bg-gray-100 p-2 rounded">Hikers Club Nepal</Link>
+            <Link to="/Events/Others/HikersClubNepal" className="block text-black hover:bg-gray-100 p-2 rounded">HikersClubNepal</Link>
             <Link to="/Events/Others/Thrifting" className="block text-black hover:bg-gray-100 p-2 rounded">Thrifting</Link>
           </div>
         )}
@@ -228,7 +217,7 @@ const Navbar = () => {
   )}
 </div>
 
-        
+         {/* Eat & Drink Dropdown */}
 <div className="relative" ref={EatandDrinkRef}>
   <button onClick={toggleEatandDrinkDropdown} className="text-white hover:text-gray-300 flex items-center">
     Eat & Drink <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
@@ -257,7 +246,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      
+      {/* Mobile sidebar */}
       {isSidebarOpen && (
         <div className="lg:hidden">
           <div className="fixed inset-0 bg-black bg-opacity-50 z-10" onClick={closeSidebar}></div>
@@ -271,7 +260,7 @@ const Navbar = () => {
             <nav className="px-4 py-2 space-y-2">
               <Link to="/" className="block text-black hover:bg-gray-100 p-2 rounded">Home</Link>
 
-              
+              {/* Mobile Things to do dropdown */}
               <div className="relative" ref={thingsToDoRef}>
                 <button onClick={toggleThingsToDoDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
                   Things to do <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
@@ -289,6 +278,7 @@ const Navbar = () => {
                         <div className="pl-4">
                           <Link to="/ThingsToDo/Adventure/Paragliding" className="block text-black hover:bg-gray-100 p-2 rounded">Paragliding</Link>
                           <Link to="/ThingsToDo/Adventure/BungeeJump" className="block text-black hover:bg-gray-100 p-2 rounded">Bungee Jump</Link>
+                          <Link to="/ThingsToDo/Adventure/ZipFlyer" className="block text-black hover:bg-gray-100 p-2 rounded">Zip Flyer</Link>
                         </div>
                       )}
                     </div>
@@ -296,7 +286,7 @@ const Navbar = () => {
                 )}
               </div>
 
-              
+              {/* Mobile Tourist Attractions dropdown */}
               <div className="relative" ref={touristAttractionsRef}>
                 <button onClick={toggleTouristAttractionsDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
                   Tourist Attractions <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
@@ -314,39 +304,28 @@ const Navbar = () => {
 
               {/* Mobile Community Festival dropdown */}
               <div className="relative" ref={communityRef}>
-                <button onClick={toggleCommunityDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
+                <button onClick={toggleCommunityDropdown}  className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
                   Community Festival <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
                 </button>
                 {isCommunityDropdownOpen && (
                   <div className="pl-4">
                     <Link to="/CommunityFestival/Street" className="block text-black hover:bg-gray-100 p-2 rounded">Street Festival</Link>
                     <Link to="/Festival/FewaFestival" className="block text-black hover:bg-gray-100 p-2 rounded">Fewa Festival</Link>
-                   <Link to="/Festival/FalguPurnima" classNamw="black text-black hover:bg-gray-100 p-2 rounded">Falgu Purnima</Link>
+                    <Link to="/Festival/FalguPurnima" className="block text-black hover:bg-gray-100 p-2 rounded">Falgu Purnima</Link>
                     <Link to="/Festival/RicePlantation" className="block text-black hover:bg-gray-100 p-2 rounded">Rice Plantation</Link>
-                    <div className="relative" ref={ethnicRef}>
-                      <button onClick={toggleEthnicDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
-                        Ethnics/Cultural <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-                      </button>
-                      {isEthnicDropdownOpen && (
-                        <div className="pl-4">
-                          <Link to="/Ethnic/Newar" className="block text-black hover:bg-gray-100 p-2 rounded">Newar</Link>
-                          <Link to="/Ethnic/Gurung" className="block text-black hover:bg-gray-100 p-2 rounded">Gurung</Link>
-                          <Link to="/Ethnic/Rai" className="block text-black hover:bg-gray-100 p-2 rounded">Rai</Link>
-                          <Link to="/Ethnic/Magar" className="block text-black hover:bg-gray-100 p-2 rounded">Magar</Link>
-                        </div>
-                      )}
-                    </div>
+                    <Link to="/Festival/Cultures/Ethnics" className="block text-black hover:bg-gray-100 p-2 rounded">Cultures/Ethnics</Link>
+                    
                   </div>
                 )}
               </div>
                {/* Mobile Tourist Attractions dropdown */}
                <div className="relative" ref={eventsRef}>
-  <button onClick={toggleEventsDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
+  <button onClick={toggleEventsDropdown}  className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
     Events <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
   </button>
   {isEventsDropdownOpen && (
     <div className="pl-4">
-     
+      {/* Trail Race Submenu */}
       <div className="relative">
         <button onClick={toggleTrailRaceDropdown} className="block text-black hover:bg-gray-100  items-center">
           Trail Race <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
@@ -364,7 +343,7 @@ const Navbar = () => {
 
       {/* Others Submenu */}
       <div className="relative">
-        <button onClick={toggleOthersDropdown} className="block text-black hover:bg-gray-100  items-center">
+        <button onClick={toggleOthersDropdown}   className="block text-black hover:bg-gray-100  items-center">
           Others <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
         </button>
         {isOthersDropdownOpen && (

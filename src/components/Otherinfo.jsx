@@ -4,14 +4,30 @@ import police from '../assets/police.jpg';
 import atm from '../assets/atm.jpg';
 import passport from '../assets/passport.jpg';
 import airplane from '../assets/airplane.jpg';
+import embassy from '../assets/embassy_image.jpg'
+import clinics from '../assets/clinic_image.jpg'
 
 // Updated securityContacts array with the new entry
 const securityContacts = [
+  
+  
   {
-    name: 'Tourist Police',
-    contact: '9856082761, 061452761',
-    image: police,
-    link: 'https://gandaki.nepalpolice.gov.np/about-us/tourist-police/',
+    name: 'VISA & Immigration',
+    image: passport,
+    link: 'https://www.immigration.gov.np/en/page/tourist-visa',
+  },
+  {
+    name: 'Embassies and Consultancies',
+    description: 'Find information on embassies and consultancies in Nepal.',
+    image: embassy, 
+    link: '/embassies-consultancies', 
+   
+  },
+  {
+    name: 'Access to Pokhara', 
+    description: 'Information on how to access Pokhara.',
+    image: airplane,
+    link: '/access-pokhara', 
   },
   {
     name: '24hr ATM',
@@ -20,15 +36,17 @@ const securityContacts = [
     link: '/ATM',
   },
   {
-    name: 'Visa Guide',
-    image: passport,
-    link: 'https://www.immigration.gov.np/en/page/tourist-visa',
+    name: 'Tourist Police',
+    contact: '9856082761, 061452761',
+    image: police,
+    link: 'https://gandaki.nepalpolice.gov.np/about-us/tourist-police/',
   },
+  
   {
-    name: 'Access to Pokhara', // New entry
-    description: 'Information on how to access Pokhara.',
-    image: airplane,
-    link: '/access-pokhara', // Update the link as needed
+    name: 'International Clinics/Hospitals',
+    description: 'Locate international clinics and hospitals in Nepal.',
+    image: clinics, 
+    link: '/international-clinics', 
   }
 ];
 
@@ -46,7 +64,7 @@ const SecurityCard = ({ contact }) => (
       className="h-full w-full object-cover"
     />
     <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white p-2">
-      <div className="text-lg font-semibold">{contact.name}</div>
+      <div className=" font-semibold">{contact.name}</div>
       {contact.contact && (
         <p className="text-xs">
           <span className="font-semibold">Contact:</span> {contact.contact}

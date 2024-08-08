@@ -14,7 +14,7 @@ const Footer = () => {
               <Link to="/about" className="hover:underline">Our Mission</Link>
             </h2>
             <p className="text-sm text-gray-300">
-              Our mission is to promote Pokhara's tourism destinations globally and provide accurate information to international tourists who want to explore this beautiful city.
+              Our mission is to promote Pokhara's tourism destinations globally and provide  information to the tourists who want to explore this beautiful city.
             </p>
           </div>
           {/* Categories Section */}

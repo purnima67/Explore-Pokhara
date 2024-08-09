@@ -21,12 +21,12 @@ const Footer = () => {
           <div className="w-full md:w-1/4 p-4">
             <h2 className="text-xl font-bold mb-4">Categories</h2>
             <ul className="text-sm text-gray-300 space-y-2">
-              <li><a href="#Thingstodo" className="hover:underline">Things to do</a></li>
-              <li><a href="#Attractions" className="hover:underline">Tourist Attractions</a></li>
+            <li><Link to="/Thingstodo" className="hover:underline">Things to do</Link></li>
+              <li><Link to="/TouristAttractions" className="hover:underline">Tourist Attractions</Link></li>
               <li><a href="#CommunityFestival" className="hover:underline">Community Festival</a></li>
               <li><a href="#Events" className="hover:underline">Events</a></li>
            
-              <li><a href="#EatandDrink" className="hover:underline">Eat & Drink</a></li>
+              <li><Link to="/EatAndDrink" className="hover:underline">Eat and Drink</Link></li>
             </ul>
           </div>
           

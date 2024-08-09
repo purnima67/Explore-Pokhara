@@ -22,7 +22,7 @@ const attractions = [
     link: '/home-stay', 
   },
   {
-    name: 'Beyond Pokhara(Trekking, Travel, Hiking)',
+    name: 'Beyond Pokhara',
     description: 'Discover breathtaking treks around Pokhara.',
     image: trekking,
     link: '/trekking-around-pokhara', 

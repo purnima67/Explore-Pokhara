@@ -136,8 +136,8 @@ const Navbar = () => {
                   {isAdventureDropdownOpen && (
                     <div className="pl-4">
                       <Link to="ThingsToDo/Adventure/Paragliding" className="block px-4 py-2 text-black hover:bg-gray-100">Paragliding</Link>
-                      <Link to="ThingsToDo/Adventure/BungeeJump" className="block px-4 py-2 text-black hover:bg-gray-100">Bungee Jump</Link>
-                      <Link to="ThingsToDo/Adventure/ZipFlyer" className="block px-4 py-2 text-black hover:bg-gray-100">Zip Flyer</Link>
+                      <Link to="ThingsToDo/Bunjee" className="block px-4 py-2 text-black hover:bg-gray-100">Bungee Jump</Link>
+                      <Link to="ThingsToDo/ZipFlyer" className="block px-4 py-2 text-black hover:bg-gray-100">Zip Flyer</Link>
                     </div>
                   )}
                 </div>
@@ -277,8 +277,8 @@ const Navbar = () => {
                       {isAdventureDropdownOpen && (
                         <div className="pl-4">
                           <Link to="/ThingsToDo/Adventure/Paragliding" className="block text-black hover:bg-gray-100 p-2 rounded">Paragliding</Link>
-                          <Link to="/ThingsToDo/Adventure/BungeeJump" className="block text-black hover:bg-gray-100 p-2 rounded">Bungee Jump</Link>
-                          <Link to="/ThingsToDo/Adventure/ZipFlyer" className="block text-black hover:bg-gray-100 p-2 rounded">Zip Flyer</Link>
+                          <Link to="/ThingsToDo/BungeeJump" className="block text-black hover:bg-gray-100 p-2 rounded">Bungee Jump</Link>
+                          <Link to="/ThingsToDo/ZipFlyer" className="block text-black hover:bg-gray-100 p-2 rounded">Zip Flyer</Link>
                         </div>
                       )}
                     </div>

@@ -17,7 +17,7 @@ const securityContacts = [
     link: 'https://www.immigration.gov.np/en/page/tourist-visa',
   },
   {
-    name: 'Embassies and Consultancies',
+    name: 'Embassies/foreign Missions',
     description: 'Find information on embassies and consultancies in Nepal.',
     image: embassy, 
     link: '/embassies-consultancies', 

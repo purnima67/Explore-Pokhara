@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Paragliding from './components/Paragliding';
 import Hiking from './components/Hiking';
+import Cycling from './components/Cycling';
 import BoatingAdventure from './components/BoatingAdventure';
 import FinancialHelp from './components/FinancialHelp';
 import Street from './components/Street';
@@ -13,6 +14,11 @@ import Yoga from './components/Yoga';
 import Temples from './components/Temples';
 import About from './components/About';
 import ATM from './components/ATM'
+import ThingsToDo from './components/ThingsToDo'
+import TouristAttractions from './components/TouristAttractions'
+import Bunjee from './components/Bunjee'
+import ZipFlyer from './components/ZipFlyer'
+import EatAndDrink from './components/EatAndDrink';
 
 const App = () => {
   return (
@@ -31,6 +37,12 @@ const App = () => {
           <Route path='/CommunityFestival/Street' element={<Street />} /> 
           <Route path="/about" element={<About />} />
           <Route path="/ATM" element={<ATM />}/>
+          <Route path="/ThingsToDo/Cycling" element={<Cycling />} />
+          <Route path="/ThingsToDo/Bunjee" element={<Bunjee />} />
+          <Route path="/ThingsToDo" element={<ThingsToDo />} />
+          <Route path="/TouristAttractions" element={<TouristAttractions />} />
+          <Route path="/ThingsToDo/ZipFlyer" element={<ZipFlyer />} />
+          <Route path="/EatAndDrink" element={<EatAndDrink />} />
         </Routes>
         <Footer />
       </div>

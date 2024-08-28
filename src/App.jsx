@@ -19,7 +19,9 @@ import TouristAttractions from './components/TouristAttractions'
 import Bunjee from './components/Bunjee'
 import ZipFlyer from './components/ZipFlyer'
 import EatAndDrink from './components/EatAndDrink';
-
+import Caves from './components/Caves'
+import Lakes from './components/Lakes'
+import Homestay from './components/Homestay'
 const App = () => {
   return (
     <BrowserRouter>
@@ -43,6 +45,9 @@ const App = () => {
           <Route path="/TouristAttractions" element={<TouristAttractions />} />
           <Route path="/ThingsToDo/ZipFlyer" element={<ZipFlyer />} />
           <Route path="/EatAndDrink" element={<EatAndDrink />} />
+          <Route path="/TouristAttractions/Caves" element={<Caves />} />
+          <Route path="/TouristAttractions/Lakes" element={<Lakes />} />
+          <Route path='/TouristAttractions/Homestay' element={<Homestay />} />
         </Routes>
         <Footer />
       </div>

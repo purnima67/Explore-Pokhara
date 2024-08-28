@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Importing images
+
 import bindhyabasini from '../assets/bindhyabasini.jpg'; 
 import barahiTemple from '../assets/barahiTemple.jpg';
 import mountainMuseum from '../assets/mountainMuseum.jpg';
@@ -10,24 +10,23 @@ import sarangkot from '../assets/sarangkot.jpg';
 import phewaLake from '../assets/phewaLake.jpg';
 import devisFall from '../assets/devisFall.jpg';
 import gupteshworCave from '../assets/gupteshworCave.jpg';
-import pumdikot from '../assets/pumdikot.jpg';  // Replaced Gurkha Museum with Pumdikot
-
+import pumdikot from '../assets/pumdikot.jpg';  
 const PhotoGallery = () => {
   const navigate = useNavigate();
 
   const places = [
-    { name: 'Shree Bindhyabasini Temple', img: bindhyabasini },
-    { name: 'Tal Barahi Temple', img: barahiTemple },
-    { name: 'International Mountain Museum', img: mountainMuseum },
-    { name: 'Sarangkot', img: sarangkot },
-    { name: 'Phewa Lake', img: phewaLake },
-    { name: "Devi's Fall", img: devisFall },
-    { name: 'Gupteshwor Mahadev Cave', img: gupteshworCave },
-    { name: 'Pumdikot', img: pumdikot }  // Updated with Pumdikot
+    { name: 'Shree Bindhyabasini Temple in Pokhara', img: bindhyabasini },
+    { name: 'Tal Barahi Temple in Pokhara', img: barahiTemple },
+    { name: 'International Mountain Museum in Pokhara', img: mountainMuseum },
+    { name: 'Sarangkot in Pokhara', img: sarangkot },
+    { name: 'Phewa Lake in Pokhara', img: phewaLake },
+    { name: "Devi's Fall in Pokhara", img: devisFall },
+    { name: 'Gupteshwor Mahadev Cave in Pokhara', img: gupteshworCave },
+    { name: 'Pumdikot in Pokhara', img: pumdikot } 
   ];
 
   const handlePlaceClick = (placeName) => {
-    // Navigate to the page for the clicked place
+    
     navigate(`/places/${placeName.toLowerCase().replace(/ /g, '-')}`);
   };
 

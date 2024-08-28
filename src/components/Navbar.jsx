@@ -70,6 +70,7 @@ const Navbar = () => {
   const toggleEatandDrinkDropdown = () => {
     setEatandDrinkDropdownOpen(!isEatandDrinkDropdownOpen);
   };
+  
 
   const handleClickOutside = (event) => {
     if (thingsToDoRef.current && !thingsToDoRef.current.contains(event.target)) {
@@ -94,7 +95,59 @@ const Navbar = () => {
       setEatandDrinkDropdownOpen(false);
     }
   };
+  const toggleDropdown = (dropdown) => {
+    setIsThingsToDoDropdownOpen(dropdown === 'thingsToDo');
+    setIsAdventureDropdownOpen(dropdown === 'adventure');
+    setIsTouristAttractionsDropdownOpen(dropdown === 'touristAttractions');
+    setIsCommunityDropdownOpen(dropdown === 'community');
+    setIsEthnicDropdownOpen(dropdown === 'ethnic');
+    setIsEventsDropdownOpen(dropdown === 'events');
+    setTrailRaceDropdownOpen(dropdown === 'trailRace');
+    setOthersDropdownOpen(dropdown === 'others');
+    setEatandDrinkDropdownOpen(dropdown === 'eatAndDrink');
+  };
+  const handleThingsToDoMouseEnter = () => {
+    setIsTouristAttractionsDropdownOpen(false); // Close the Tourist Attractions dropdown
+    toggleThingsToDoDropdown(); 
+    setIsCommunityDropdownOpen(false);
+    setIsEventsDropdownOpen(false);
+    setEatandDrinkDropdownOpen(false);// Open or close the Things to Do dropdown
+  };
+  const handleTouristAttractionsMouseEnter = () =>{
+    toggleTouristAttractionsDropdown();
+    setIsThingsToDoDropdownOpen(false); 
+    setIsCommunityDropdownOpen(false);
+    setIsEventsDropdownOpen(false);
+    setEatandDrinkDropdownOpen(false);
 
+  };
+  const handleEatandDrinkMouseEnter =() =>{
+    setIsTouristAttractionsDropdownOpen(false); // Close the Tourist Attractions dropdown
+    setIsThingsToDoDropdownOpen(false); 
+    setIsCommunityDropdownOpen(false);
+    setIsEventsDropdownOpen(false);
+    toggleEatandDrinkDropdown();
+  };
+  const communityMouseEnter =() =>{
+    setIsTouristAttractionsDropdownOpen(false); // Close the Tourist Attractions dropdown
+    setIsThingsToDoDropdownOpen(false); 
+    toggleCommunityDropdown();
+    setIsEventsDropdownOpen(false);
+    setEatandDrinkDropdownOpen(false);
+   
+  };
+  const handleEventsMouseEnter =() => {
+    setIsTouristAttractionsDropdownOpen(false); // Close the Tourist Attractions dropdown
+    setIsThingsToDoDropdownOpen(false); 
+   setIsCommunityDropdownOpen(false);
+    toggleEventsDropdown();
+    setEatandDrinkDropdownOpen(false);
+  };
+ const mobileBarThingsToDo = () =>{
+  setIsSidebarOpen(false);
+  handleThingsToDoMouseEnter();
+ 
+ };
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -104,8 +157,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-gradient-to-r from-gray-500 to-black p-2 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-gradient-to-r from-gray-500 to-black p-2 shadow-md ">
+      <div className="container mx-auto flex justify-between items-center h-[4rem]">
         <div className="text-white text-2xl font-bold">Explore Pokhara</div>
 
         
@@ -118,68 +171,71 @@ const Navbar = () => {
        
         <div className="hidden lg:flex space-x-6 mr-16">
           <Link to="/" className="text-white hover:text-gray-300">Home</Link>
-
+        
+         
           {/* Things to do dropdown */}
-          <div className="relative" ref={thingsToDoRef}>
-            <button onClick={toggleThingsToDoDropdown} className="text-white hover:text-gray-300 flex items-center">
-              Things to do <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-            </button>
-            {isThingsToDoDropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                <Link to="/ThingsToDo/Boating" className="block px-4 py-2 text-black hover:bg-gray-100">Boating</Link>
-                <Link to="/ThingsToDo/Hiking" className="block px-4 py-2 text-black hover:bg-gray-100">Hiking</Link>
-                <Link to="/ThingsToDo/Cycling" className="block px-4 py-2 text-black hover:bg-gray-100">Cycling</Link>
-                <div className="relative" ref={adventureRef}>
-                  <button onClick={toggleAdventureDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
-                    Adventure <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-                  </button>
-                  {isAdventureDropdownOpen && (
-                    <div className="pl-4">
-                      <Link to="ThingsToDo/Adventure/Paragliding" className="block px-4 py-2 text-black hover:bg-gray-100">Paragliding</Link>
-                      <Link to="ThingsToDo/Bunjee" className="block px-4 py-2 text-black hover:bg-gray-100">Bungee Jump</Link>
-                      <Link to="ThingsToDo/ZipFlyer" className="block px-4 py-2 text-black hover:bg-gray-100">Zip Flyer</Link>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
+<div className="relative" ref={thingsToDoRef}  >
+<button onClick={() => toggleDropdown('thingsToDo')} onMouseOver={ handleThingsToDoMouseEnter} className="text-white hover:text-gray-300 flex items-center">
+  Things to do <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+</button>
+  {isThingsToDoDropdownOpen && (
+    <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
+      <Link to="/ThingsToDo/Boating"  onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Boating</Link>
+      <Link to="/ThingsToDo/Hiking"  onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Hiking</Link>
+      <Link to="/ThingsToDo/Cycling" onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Cycling</Link>
+      <div className="relative" onClick={() => setIsThingsToDoDropdownOpen(false)} ref={adventureRef} onMouseEnter={toggleAdventureDropdown} onMouseLeave={() => setIsAdventureDropdownOpen(false)}>
+        <button className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
+          Adventure <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+        </button>
+        {isAdventureDropdownOpen && (
+          <div className="pl-4">
+            <Link to="ThingsToDo/Adventure/Paragliding" onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Paragliding</Link>
+            <Link to="ThingsToDo/Bunjee" onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Bungee Jump</Link>
+            <Link to="ThingsToDo/ZipFlyer" onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Zip Flyer</Link>
           </div>
+        )}
+      </div>
+    </div>
+  )}
+</div>
 
-          {/* Tourist Attractions dropdown */}
-          <div className="relative" ref={touristAttractionsRef}>
-            <button onClick={toggleTouristAttractionsDropdown} className="text-white hover:text-gray-300 flex items-center">
-              Tourist Attractions <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
-            </button>
+
+        
+          <div className="relative" ref={touristAttractionsRef}  >
+          <button onClick={() => toggleDropdown('touristAttractions')}  onMouseOver={handleTouristAttractionsMouseEnter } className="text-white hover:text-gray-300 flex items-center">
+  Tourist Attractions <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
+</button>
             {isTouristAttractionsDropdownOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                <Link to="/TouristAttractions/Temples" className="block px-4 py-2 text-black hover:bg-gray-100">Temples & Monuments</Link>
-                <Link to="/TouristAttractions/Caves" className="block px-4 py-2 text-black hover:bg-gray-100">Caves</Link>
-                <Link to="/TouristAttractions/Lakes" className="block px-4 py-2 text-black hover:bg-gray-100">Lakes</Link>
-                <Link to="/TouristAttractions/Homestay" className="block px-4 py-2 text-black hover:bg-gray-100">Homestay</Link>
-                <Link to="/TouristAttractions/Yoga" className="block px-4 py-2 text-black hover:bg-gray-100">Yoga Retreat</Link>
+                <Link to="/TouristAttractions/Temples" onClick={() => setIsTouristAttractionsDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Temples & Monuments</Link>
+                <Link to="/TouristAttractions/Caves"  onClick={() => setIsTouristAttractionsDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Caves</Link>
+                <Link to="/TouristAttractions/Lakes"  onClick={() => setIsTouristAttractionsDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Lakes</Link>
+                <Link to="/TouristAttractions/Homestay"  onClick={() => setIsTouristAttractionsDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Homestay</Link>
+                <Link to="/TouristAttractions/Yoga"  onClick={() => setIsTouristAttractionsDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Yoga Retreat</Link>
               </div>
             )}
           </div>
 
          
           <div className="relative" ref={communityRef}>
-            <button onClick={toggleCommunityDropdown} className="text-white hover:text-gray-300 flex items-center">
+            <button onClick={toggleCommunityDropdown} onMouseEnter = { communityMouseEnter} className="text-white hover:text-gray-300 flex items-center">
               Community Festival <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
             </button>
             {isCommunityDropdownOpen && (
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-                <Link to="/CommunityFestival/Street" className="block px-4 py-2 text-black hover:bg-gray-100">Street Festival</Link>
-                <Link to="/Festival/FewaFestival" className="block px-4 py-2 text-black hover:bg-gray-100">Fewa Festival</Link>
-                <Link to="/Festival/FalguPurnima" className="block px-4 py-2 text-black hover:bg-gray-100">Falgu Purnima</Link>
-                <Link to="/Festival/RicePlantation" className="block px-4 py-2 text-black hover:bg-gray-100">Rice Plantation</Link>
-                <Link to="/Festival/Ethincs/Culture" className="block px-4 py-2 text-black hover:bg-gray-100">Ethnics/Culture</Link>
+                <Link to="/CommunityFestival/Street" onClick={() => setIsCommunityDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Street Festival</Link>
+                <Link to="/Festival/FewaFestival" onClick={() => setIsCommunityDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Fewa Festival</Link>
+                <Link to="/Festival/FalguPurnima" onClick={() => setIsCommunityDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Falgu Purnima</Link>
+                <Link to="/Festival/RicePlantation" onClick={() => setIsCommunityDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Rice Plantation</Link>
+                <Link to="/Festival/Ethincs/Culture" onClick={() => setIsCommunityDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Ethnics/Culture</Link>
               </div>
             )}
           </div>
          
-          {/* Tourist Attractions dropdown */}
+         
           <div className="relative" ref={eventsRef}>
-  <button onClick={toggleEventsDropdown} className="text-white hover:text-gray-300 flex items-center">
+  <button onClick={toggleEventsDropdown} onMouseOver={handleEventsMouseEnter} 
+   className="text-white hover:text-gray-300 flex items-center">
     Events <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
   </button>
   {isEventsDropdownOpen && (
@@ -191,25 +247,26 @@ const Navbar = () => {
         </button>
         {isTrailRaceDropdownOpen && (
           <div className="pl-4">
-            <Link to="/Events/TrailRace/FishtailRace" className="block text-black hover:bg-gray-100 p-2 rounded">Fishtail Race</Link>
-            <Link to="/Events/TrailRace/PanchaseUltraRace" className="block text-black hover:bg-gray-100 p-2 rounded">Panchase Ultra Race</Link>
+            <Link to="/Events/TrailRace/FishtailRace" onClick={() => setEatandDrinkDropdownOpen(false)} className="block text-black hover:bg-gray-100 p-2 rounded">Fishtail Race</Link>
+            <Link to="/Events/TrailRace/PanchaseUltraRace"  onClick={() => setEatandDrinkDropdownOpen(false)} className="block text-black hover:bg-gray-100 p-2 rounded">Panchase Ultra Race</Link>
           </div>
         )}
       </div>
 
-      <Link to="/Events/PokharaMarathon" className="block px-4 py-2 text-black hover:bg-gray-100">Pokhara Marathon</Link>
-      <Link to="/Events/MusicalEvents" className="block px-4 py-2 text-black hover:bg-gray-100">Musical Events</Link>
+      <Link to="/Events/PokharaMarathon"   onClick={() => setEatandDrinkDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Pokhara Marathon</Link>
+      <Link to="/Events/MusicalEvents"  onClick={() => setEatandDrinkDropdownOpen(false)}  className="block px-4 py-2 text-black hover:bg-gray-100">Musical Events</Link>
+
 
       {/* Others Submenu */}
       <div className="relative">
-        <button onClick={toggleOthersDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
+        <button onClick={toggleOthersDropdown}  className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
           Others <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
         </button>
         {isOthersDropdownOpen && (
           <div className="pl-4">
-            <Link to="/Events/Others/DevelopersMeet" className="block text-black hover:bg-gray-100 p-2 rounded">Developers Meet</Link>
-            <Link to="/Events/Others/HikersClubNepal" className="block text-black hover:bg-gray-100 p-2 rounded">HikersClubNepal</Link>
-            <Link to="/Events/Others/Thrifting" className="block text-black hover:bg-gray-100 p-2 rounded">Thrifting</Link>
+            <Link to="/Events/Others/DevelopersMeet"   onClick={() => setIsEventsDropdownOpen(false)} className="block text-black hover:bg-gray-100 p-2 rounded">Developers Meet</Link>
+            <Link to="/Events/Others/HikersClubNepal"  onClick={() => setIsEventsDropdownOpen(false)} className="block text-black hover:bg-gray-100 p-2 rounded">HikersClubNepal</Link>
+            <Link to="/Events/Others/Thrifting"  onClick={() => setIsEventsDropdownOpen(false)} className="block text-black hover:bg-gray-100 p-2 rounded">Thrifting</Link>
           </div>
         )}
       </div>
@@ -219,24 +276,24 @@ const Navbar = () => {
 
          {/* Eat & Drink Dropdown */}
 <div className="relative" ref={EatandDrinkRef}>
-  <button onClick={toggleEatandDrinkDropdown} className="text-white hover:text-gray-300 flex items-center">
+  <button onClick={toggleEatandDrinkDropdown} onMouseEnter ={ handleEatandDrinkMouseEnter} className="text-white hover:text-gray-300 flex items-center">
     Eat & Drink <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
   </button>
   {isEatandDrinkDropdownOpen && (
     <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-      <Link to="/EatDrink/LocalSpecialities" className="block px-4 py-2 text-black hover:bg-gray-100">
+      <Link to="/EatDrink/LocalSpecialities"  onClick={() => setEatandDrinkDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">
         Local Specialities
       </Link>
-      <Link to="/EatDrink/FishCuisine" className="block px-4 py-2 text-black hover:bg-gray-100">
+      <Link to="/EatDrink/FishCuisine" onClick={() => setEatandDrinkDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">
         Fish Cuisine
       </Link>
-      <Link to="/EatDrink/BarsAndPubs" className="block px-4 py-2 text-black hover:bg-gray-100">
+      <Link to="/EatDrink/BarsAndPubs" onClick={() => setEatandDrinkDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">
         Bars and Pubs
       </Link>
-      <Link to="/EatDrink/Restaurants" className="block px-4 py-2 text-black hover:bg-gray-100">
+      <Link to="/EatDrink/Restaurants" onClick={() => setEatandDrinkDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">
         Restaurants
       </Link>
-      <Link to="/EatDrink/Cafes" className="block px-4 py-2 text-black hover:bg-gray-100">
+      <Link to="/EatDrink/Cafes" onClick={() => setEatandDrinkDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">
         Cafes
       </Link>
     </div>
@@ -245,6 +302,7 @@ const Navbar = () => {
 
         </div>
       </div>
+    
 
       {/* Mobile sidebar */}
       {isSidebarOpen && (
@@ -267,18 +325,18 @@ const Navbar = () => {
                 </button>
                 {isThingsToDoDropdownOpen && (
                   <div className="pl-4">
-                    <Link to="/ThingsToDo/Boating" className="block text-black hover:bg-gray-100 p-2 rounded">Boating</Link>
-                    <Link to="/ThingsToDo/Hiking" className="block text-black hover:bg-gray-100 p-2 rounded">Hiking</Link>
-                    <Link to="/ThingsToDo/Cycling" className="block text-black hover:bg-gray-100 p-2 rounded">Cycling</Link>
+                    <Link to="/ThingsToDo/Boating" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Boating</Link>
+                    <Link to="/ThingsToDo/Hiking" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Hiking</Link>
+                    <Link to="/ThingsToDo/Cycling" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Cycling</Link>
                     <div className="relative" ref={adventureRef}>
                       <button onClick={toggleAdventureDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
                         Adventure <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
                       </button>
                       {isAdventureDropdownOpen && (
                         <div className="pl-4">
-                          <Link to="/ThingsToDo/Adventure/Paragliding" className="block text-black hover:bg-gray-100 p-2 rounded">Paragliding</Link>
-                          <Link to="/ThingsToDo/BungeeJump" className="block text-black hover:bg-gray-100 p-2 rounded">Bungee Jump</Link>
-                          <Link to="/ThingsToDo/ZipFlyer" className="block text-black hover:bg-gray-100 p-2 rounded">Zip Flyer</Link>
+                          <Link to="/ThingsToDo/Adventure/Paragliding" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Paragliding</Link>
+                          <Link to="/ThingsToDo/BungeeJump" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Bungee Jump</Link>
+                          <Link to="/ThingsToDo/ZipFlyer" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Zip Flyer</Link>
                         </div>
                       )}
                     </div>
@@ -287,17 +345,18 @@ const Navbar = () => {
               </div>
 
               {/* Mobile Tourist Attractions dropdown */}
+
               <div className="relative" ref={touristAttractionsRef}>
                 <button onClick={toggleTouristAttractionsDropdown} className="w-full text-left text-black hover:bg-gray-100 p-2 rounded flex items-center">
                   Tourist Attractions <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
                 </button>
                 {isTouristAttractionsDropdownOpen && (
                   <div className="pl-4">
-                    <Link to="/TouristAttractions/Temples" className="block text-black hover:bg-gray-100 p-2 rounded">Temples & Monuments</Link>
-                    <Link to="/TouristAttractions/Caves" className="block text-black hover:bg-gray-100 p-2 rounded">Caves</Link>
-                    <Link to="/TouristAttractions/Lakes" className="block text-black hover:bg-gray-100 p-2 rounded">Lakes</Link>
-                    <Link to="/TouristAttractions/Homestay" className="block text-black hover:bg-gray-100 p-2 rounded">Homestay</Link>
-                    <Link to="/TouristAttractions/Yoga" className="block text-black hover:bg-gray-100 p-2 rounded">Yoga Retreat</Link>
+                    <Link to="/TouristAttractions/Temples" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Temples & Monuments</Link>
+                    <Link to="/TouristAttractions/Caves" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Caves</Link>
+                    <Link to="/TouristAttractions/Lakes" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Lakes</Link>
+                    <Link to="/TouristAttractions/Homestay" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Homestay</Link>
+                    <Link to="/TouristAttractions/Yoga" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Yoga Retreat</Link>
                   </div>
                 )}
               </div>
@@ -309,11 +368,11 @@ const Navbar = () => {
                 </button>
                 {isCommunityDropdownOpen && (
                   <div className="pl-4">
-                    <Link to="/CommunityFestival/Street" className="block text-black hover:bg-gray-100 p-2 rounded">Street Festival</Link>
-                    <Link to="/Festival/FewaFestival" className="block text-black hover:bg-gray-100 p-2 rounded">Fewa Festival</Link>
-                    <Link to="/Festival/FalguPurnima" className="block text-black hover:bg-gray-100 p-2 rounded">Falgu Purnima</Link>
-                    <Link to="/Festival/RicePlantation" className="block text-black hover:bg-gray-100 p-2 rounded">Rice Plantation</Link>
-                    <Link to="/Festival/Cultures/Ethnics" className="block text-black hover:bg-gray-100 p-2 rounded">Cultures/Ethnics</Link>
+                    <Link to="/CommunityFestival/Street" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Street Festival</Link>
+                    <Link to="/Festival/FewaFestival" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Fewa Festival</Link>
+                    <Link to="/Festival/FalguPurnima" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Falgu Purnima</Link>
+                    <Link to="/Festival/RicePlantation" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Rice Plantation</Link>
+                    <Link to="/Festival/Cultures/Ethnics" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Cultures/Ethnics</Link>
                     
                   </div>
                 )}
@@ -332,25 +391,24 @@ const Navbar = () => {
         </button>
         {isTrailRaceDropdownOpen && (
           <div className="pl-4">
-            <Link to="/Events/TrailRace/FishtailRace" className="block text-black hover:bg-gray-100">Fishtail Race</Link>
-            <Link to="/Events/TrailRace/PanchaseUltraRace" className="block text-black hover:bg-gray-100">Panchase Ultra Race</Link>
+            <Link to="/Events/TrailRace/FishtailRace" onClick={closeSidebar} className="block text-black hover:bg-gray-100">Fishtail Race</Link>
+            <Link to="/Events/TrailRace/PanchaseUltraRace" onClick={closeSidebar}  className="block text-black hover:bg-gray-100">Panchase Ultra Race</Link>
           </div>
         )}
       </div>
 
-      <Link to="/Events/PokharaMarathon" className="block text-black hover:bg-gray-100 p-2 rounded">Pokhara Marathon</Link>
-      <Link to="/Events/MusicalEvents" className="block text-black hover:bg-gray-100 p-2 rounded">Musical Events</Link>
+      <Link to="/Events/PokharaMarathon" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Pokhara Marathon</Link>
+      <Link to="/Events/MusicalEvents"  onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Musical Events</Link>
 
-      {/* Others Submenu */}
       <div className="relative">
         <button onClick={toggleOthersDropdown}   className="block text-black hover:bg-gray-100  items-center">
           Others <FontAwesomeIcon icon={faCaretDown} className="ml-1" />
         </button>
         {isOthersDropdownOpen && (
           <div className="pl-4">
-            <Link to="/Events/Others/DevelopersMeet" className="block text-black hover:bg-gray-100">Developers Meet</Link>
-            <Link to="/Events/Others/HikersClubNepal" className="block text-black hover:bg-gray-100">Hikers Club Nepal</Link>
-            <Link to="/Events/Others/Thrifting" className="block text-black hover:bg-gray-100">Thrifting</Link>
+            <Link to="/Events/Others/DevelopersMeet" onClick={closeSidebar} className="block text-black hover:bg-gray-100">Developers Meet</Link>
+            <Link to="/Events/Others/HikersClubNepal"onClick={closeSidebar} className="block text-black hover:bg-gray-100">Hikers Club Nepal</Link>
+            <Link to="/Events/Others/Thrifting" onClick={closeSidebar} className="block text-black hover:bg-gray-100">Thrifting</Link>
           </div>
         )}
       </div>
@@ -367,19 +425,19 @@ const Navbar = () => {
   </button>
   {isEatandDrinkDropdownOpen && (
     <div className="pl-4">
-      <Link to="/EatDrink/LocalSpecialities" className="block text-black hover:bg-gray-100 p-2 rounded">
+      <Link to="/EatDrink/LocalSpecialities"  onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">
         Local Specialities
       </Link>
-      <Link to="/EatDrink/FishCuisine" className="block text-black hover:bg-gray-100 p-2 rounded">
+      <Link to="/EatDrink/FishCuisine"  onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">
         Fish Cuisine
       </Link>
-      <Link to="/EatDrink/BarsAndPubs" className="block text-black hover:bg-gray-100 p-2 rounded">
+      <Link to="/EatDrink/BarsAndPubs"  onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">
         Bars and Pubs
       </Link>
-      <Link to="/EatDrink/Restaurants" className="block text-black hover:bg-gray-100 p-2 rounded">
+      <Link to="/EatDrink/Restaurants"  onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">
         Restaurants
       </Link>
-      <Link to="/EatDrink/Cafes" className="block text-black hover:bg-gray-100 p-2 rounded">
+      <Link to="/EatDrink/Cafes" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">
         Cafes
       </Link>
     </div>

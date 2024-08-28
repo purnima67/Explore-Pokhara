@@ -158,7 +158,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-gray-500 to-black p-2 shadow-md ">
-      <div className="container mx-auto flex justify-between items-center h-[4rem]">
+      <div className="container mx-auto flex justify-between items-center h-[3rem]">
         <div className="text-white text-2xl font-bold">Explore Pokhara</div>
 
         

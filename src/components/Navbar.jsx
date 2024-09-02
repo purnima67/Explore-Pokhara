@@ -143,11 +143,7 @@ const Navbar = () => {
     toggleEventsDropdown();
     setEatandDrinkDropdownOpen(false);
   };
- const mobileBarThingsToDo = () =>{
-  setIsSidebarOpen(false);
-  handleThingsToDoMouseEnter();
  
- };
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -159,7 +155,10 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-gray-500 to-black p-2 shadow-md ">
       <div className="container mx-auto flex justify-between items-center h-[3rem]">
-        <div className="text-white text-2xl font-bold">Explore Pokhara</div>
+        <div className="text-white text-2xl font-bold">
+        <Link to="/" className="text-white hover:text-gray-300">Explore Pokhara</Link>
+        
+         </div>
 
         
         <div className="block lg:hidden">
@@ -180,7 +179,7 @@ const Navbar = () => {
 </button>
   {isThingsToDoDropdownOpen && (
     <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20">
-      <Link to="/ThingsToDo/Boating"  onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Boating</Link>
+      <Link to="/Boating"  onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Boating</Link>
       <Link to="/ThingsToDo/Hiking"  onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Hiking</Link>
       <Link to="/ThingsToDo/Cycling" onClick={() => setIsThingsToDoDropdownOpen(false)} className="block px-4 py-2 text-black hover:bg-gray-100">Cycling</Link>
       <div className="relative" onClick={() => setIsThingsToDoDropdownOpen(false)} ref={adventureRef} onMouseEnter={toggleAdventureDropdown} onMouseLeave={() => setIsAdventureDropdownOpen(false)}>
@@ -316,7 +315,7 @@ const Navbar = () => {
               </button>
             </div>
             <nav className="px-4 py-2 space-y-2">
-              <Link to="/" className="block text-black hover:bg-gray-100 p-2 rounded">Home</Link>
+              <Link to="/" className="block text-black hover:bg-gray-100 p-2 rounded"  onClick={closeSidebar} >Home</Link>
 
               {/* Mobile Things to do dropdown */}
               <div className="relative" ref={thingsToDoRef}>

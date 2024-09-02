@@ -22,6 +22,17 @@ import EatAndDrink from './components/EatAndDrink';
 import Caves from './components/Caves'
 import Lakes from './components/Lakes'
 import Homestay from './components/Homestay'
+import Mountains from './components/Mountains';
+import Gupteshwor from './components/Gupteshwor';
+import Pumdikot from './components/Pumdikot';
+import Museums from './components/Museums';
+import DevisFall from './components/DevisFall';
+import Sarangkot from './components/Sarangkot';
+import PhewaLake from './components/PhewaLake';
+import Bindabasini from './components/Bindabasini'
+import TalBarahi from './components/TalBarahi';
+import SunriseBliss from './components/SunriseBliss';
+import PokharaDetails from './components/PokharaDetails';
 const App = () => {
   return (
     <BrowserRouter>
@@ -32,7 +43,15 @@ const App = () => {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/ThingsToDo/Adventure/Paragliding" element={<Paragliding />} />
           <Route path="/ThingsToDo/Hiking" element={<Hiking />} />
-          <Route path="/ThingsToDo/Boating" element={<BoatingAdventure />} />
+          <Route path="/places/shree-bindhyabasini-temple-in-pokhara" element={<Bindabasini />} />
+          <Route path="/places/tal-barahi-temple-in-pokhara" element={<TalBarahi />} />
+          <Route path="/places/gupteshwor-mahadev-cave-in-pokhara" element={<Gupteshwor />} />
+          <Route path="/places/international-mountain-museum-in-pokhara" element={<Museums />} />
+          <Route path="/places/devi's-fall-in-pokhara" element={<DevisFall />} />
+          <Route path="/places/sarangkot-in-pokhara" element={<Sarangkot />} />
+          <Route path="/places/phewa-lake-in-pokhara" element={<PhewaLake />} />
+          <Route path="/places/pumdikot-in-pokhara" element={<Pumdikot />} />
+          <Route path="/Boating" element={<BoatingAdventure />} />
           <Route path="/FinancialHelp" element={<FinancialHelp />} />
           <Route path="/TouristAttractions/Yoga" element={<Yoga />} />
           <Route path='/TouristAttractions/Temples' element={<Temples />} />
@@ -48,7 +67,10 @@ const App = () => {
           <Route path="/TouristAttractions/Caves" element={<Caves />} />
           <Route path="/TouristAttractions/Lakes" element={<Lakes />} />
           <Route path='/TouristAttractions/Homestay' element={<Homestay />} />
-        </Routes>
+          <Route path='/Mountains' element={<Mountains />} />
+          <Route path='/SunriseBliss' element={<SunriseBliss />} />
+          <Route path='/PokharaDetails' element={<PokharaDetails />} />
+       </Routes>
         <Footer />
       </div>
     </BrowserRouter>

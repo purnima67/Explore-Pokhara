@@ -1,14 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
 import map from '../assets/map.jpg';
-
-const Content = () => {
-  const navigate = useNavigate();
-
-  const handleViewMore = () => {
-    navigate('/PokharaDetails'); // Adjust the route as necessary
-  };
-
+const PokharaDetails = () => {
   return (
     <div className="container mx-auto md:p-8 p-2 mt-2">
       <div className="text-center p-6 mx-auto">
@@ -37,19 +29,16 @@ const Content = () => {
               <p className="text-gray-700 text-sm md:text-base">
                 Pokhara is a city in central Nepal, known for its stunning natural beauty, including the Phewa Lake, panoramic views of the Himalayan peaks, and numerous adventure sports like paragliding and trekking. 
                 <br />
-                <a 
-                  onClick={handleViewMore}
-                  className="text-blue-500 cursor-pointer hover:underline mt-2 inline-block"
-                >
-                  View More
-                </a>
+               
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit a sint, id libero totam reiciendis, dolorum ipsam nam expedita aspernatur sequi ducimus ad? Unde tenetur ratione qui quasi sequi minima! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reprehenderit, repudiandae adipisci, quo rerum nisi soluta veritatis earum itaque consequuntur corrupti optio error reiciendis tenetur eius nulla illo numquam iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aspernatur. Fuga corrupti numquam quaerat earum accusantium enim dolores inventore at consequuntur? Quasi quod nisi voluptas hic ea esse reiciendis odit.</p>
+      
+      </div>
+  )
+}
 
-export default Content;
+export default PokharaDetails

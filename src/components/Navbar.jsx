@@ -324,7 +324,7 @@ const Navbar = () => {
                 </button>
                 {isThingsToDoDropdownOpen && (
                   <div className="pl-4">
-                    <Link to="/ThingsToDo/Boating" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Boating</Link>
+                    <Link to="/Boating" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Boating</Link>
                     <Link to="/ThingsToDo/Hiking" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Hiking</Link>
                     <Link to="/ThingsToDo/Cycling" onClick={closeSidebar} className="block text-black hover:bg-gray-100 p-2 rounded">Cycling</Link>
                     <div className="relative" ref={adventureRef}>

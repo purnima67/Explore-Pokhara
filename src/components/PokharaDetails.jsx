@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import map from '../assets/map.jpg';
 const PokharaDetails = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <div className="container mx-auto md:p-8 p-2 mt-2">
       <div className="text-center p-6 mx-auto">

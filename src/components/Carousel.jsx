@@ -42,7 +42,7 @@ const PokharaCarousel = () => {
           />
           <div className="absolute inset-0 flex items-center justify-center w-full h-full">
             <div className="text-center text-white">
-              <h2 className="md:text-5xl font-bold mb-2 mt-20 md:mt-40 text-2xl">Find your paradise</h2>
+              <h2 className="md:text-5xl font-bold mb-2 mt-12 md:mt-40 text-2xl">Find your paradise</h2>
               <p className="md:text-lg mb-4">Discover the serene lakes and majestic mountains.</p>
              <Link to="/Mountains" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Explore</Link>
             </div>
@@ -56,7 +56,7 @@ const PokharaCarousel = () => {
           />
           <div className="absolute inset-0 flex items-center justify-center w-full h-full">
             <div className="text-center text-white">
-              <h2 className="md:text-5xl font-bold mb-2 mt-20 md:mt-40 text-2xl">Boating Adventure</h2>
+              <h2 className="md:text-5xl font-bold mb-2 mt-12 md:mt-40 text-2xl">Boating Adventure</h2>
               <p className="md:text-lg mb-4">Experience boating amidst stunning landscapes.</p>
               <Link to="/Boating" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Explore</Link>
             </div>
@@ -70,7 +70,7 @@ const PokharaCarousel = () => {
           />
           <div className="absolute inset-0 flex items-center justify-center w-full h-full">
             <div className="text-center text-white">
-              <h2 className="md:text-5xl font-bold mb-2 mt-20 md:mt-40 text-2xl">Morning Bliss</h2>
+              <h2 className="md:text-5xl font-bold mb-2 mt-12 md:mt-40 text-2xl">Morning Bliss</h2>
               <p className="md:text-lg mb-4">Witness the breathtaking sunrise over Pokhara.</p>
               <Link to="/SunriseBliss" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Explore</Link>
             </div>

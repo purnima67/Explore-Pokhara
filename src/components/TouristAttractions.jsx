@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -10,7 +10,7 @@ import yogaRetreatImg from '../assets/yoga-retreat-in-pokhara.jpg';
 
 const TouristAttractions = () => {
   const navigate = useNavigate();
-
+  
   
   const attractions = [
     { name: 'Temples & Monuments', img: templesImg, link: '/TouristAttractions/Temples' },
@@ -23,6 +23,9 @@ const TouristAttractions = () => {
   const handleAttractionClick = (link) => {
     navigate(link);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
   return (
     <div className='p-10'>

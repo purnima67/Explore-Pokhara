@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import pumdikot from '../assets/pumdikot.jpg';
 
 const Pumdikot = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  }, []);
   return (
     <div>Pumdikot
       <img src={pumdikot} alt="pumdikot-in-pokhara"></img>

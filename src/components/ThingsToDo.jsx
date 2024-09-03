@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Importing images for each activity
@@ -26,6 +26,9 @@ const ThingsToDo = () => {
   const handleActivityClick = (link) => {
     navigate(link);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+  }, []);
 
   return (
     <div className='p-10'>

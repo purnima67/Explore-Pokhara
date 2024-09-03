@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -24,6 +24,9 @@ const EatAndDrink = () => {
   const handleOptionClick = (link) => {
     navigate(link);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+  }, []);
 
   return (
     <div className='p-10 bg-gradient-to-br from-gray-100 to-gray-300'>

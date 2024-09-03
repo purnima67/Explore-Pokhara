@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import sarangkot from '../assets/sarangkot.jpg';
 
 const Sarangkot = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <div>Sarangkot
       <img src={sarangkot} alt="sarangkot-in-pokhara"></img>

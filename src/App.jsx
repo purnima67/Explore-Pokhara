@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'; 
 import Home from './components/Home';
@@ -34,6 +34,9 @@ import TalBarahi from './components/TalBarahi';
 import SunriseBliss from './components/SunriseBliss';
 import PokharaDetails from './components/PokharaDetails';
 const App = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <BrowserRouter>
       <div>

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import phewaLake from '../assets/phewaLake.jpg';
 
 const PhewaLake = () => {
+  useEffect(() =>{
+
+   window.scrollTo(0,0);
+  } , []);
   return (
     <div>Phewa Lake
       <img src={phewaLake} alt="phewa-lake-in-pokhara"></img>

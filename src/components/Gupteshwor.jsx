@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import gupteshworCave from '../assets/gupteshworCave.jpg';
 
 const Gupteshwor = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <div>Gupteshwor Mahadev Cave
       <img src={gupteshworCave} alt="gupteshwor-mahadev-cave-in-pokhara"></img>

@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import barahiTemple from '../assets/barahiTemple.jpg';
 
 const TalBarahi = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <div>Taal Barahi Temple
       <img src={barahiTemple} alt="taalbarahi-temple-in-pokhara"></img>

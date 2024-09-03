@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import devisFall from '../assets/devisFall.jpg';
 
 const DevisFall = () => {
+  useEffect(()=> {
+    window.scrollTo(0,0);
+   }, []);
+ 
   return (
     <div>Devi's Fall
       <img src={devisFall} alt="devis-fall-in-pokhara"></img>

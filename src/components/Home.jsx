@@ -10,6 +10,7 @@ import Explore from './Explore';
 import OtherAttractions from './OtherAttractions';
 
 const Home = () => {
+ 
   return (
     <div>
       <Carousel />
